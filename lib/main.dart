@@ -24,10 +24,37 @@ class _MyAppState extends State<MyApp> {
           children: <Widget>[
             Align(
               alignment: Alignment.center,
-                        child: Padding(
+              child: Padding(
                 padding: EdgeInsets.only(top: 30.0, bottom: 25.0),
-                child: Image.asset("assets/logo.png", width: 62.0, height:43.0,),
+                child: Image.asset(
+                  "assets/logo.png",
+                  width: 52.0,
+                  height: 33.0,
+                ),
               ),
+            ),
+            Container(
+              width: double.infinity,
+              height: 250.0,
+              decoration: BoxDecoration(
+                  color: Color(0xFFFAECFB),
+                  borderRadius: BorderRadius.circular(20.0),
+                  border: Border.all(
+                      color: Colors.grey.withOpacity(.3), width: .2)),
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(height: 8.0,),
+                          Image.asset("assets/shoes_01.png", width: 251.0, height: 161.0,),
+                          Text("Hybrid Rocket WNS", style:TextStyle(fontSize: 20.0, fontFamily:"Raleway")),
+                          SizedBox(height: 15.0,),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              IconButton()
+                            ],
+                          )
+                        ],
+                      ),
             ),
           ],
         ),
