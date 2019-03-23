@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './customIcon.dart';
 
 void main() => runApp(MaterialApp(
       home: MyApp(),
@@ -35,7 +36,7 @@ class _MyAppState extends State<MyApp> {
             ),
             Container(
               width: double.infinity,
-              height: 250.0,
+              height: 260.0,
               decoration: BoxDecoration(
                   color: Color(0xFFFAECFB),
                   borderRadius: BorderRadius.circular(20.0),
@@ -50,7 +51,8 @@ class _MyAppState extends State<MyApp> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              IconButton()
+                              IconButton(icon: Icon(CustomIcon.favorite),
+                              onPressed: () {},),
                             ],
                           )
                         ],
