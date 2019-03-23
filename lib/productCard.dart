@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import './customIcon.dart';
 
 class ProductCard extends StatelessWidget {
-  int cardColor;
-  String imgUrl;
-  String title;
-  String previousPrice;
-  String price;
+  final int cardColor;
+  final String imgUrl;
+  final String title;
+  final String previousPrice;
+  final String price;
 
   ProductCard({this.cardColor, this.imgUrl, this.title, this.previousPrice, this.price});
 
@@ -16,7 +16,7 @@ class ProductCard extends StatelessWidget {
               width: double.infinity,
               height: 270.0,
               decoration: BoxDecoration(
-                  color: Color(0xFFFAECFB),
+                  color: Color(cardColor),
                   borderRadius: BorderRadius.circular(20.0),
                   border: Border.all(
                       color: Colors.grey.withOpacity(.3), width: .2)),
@@ -26,11 +26,11 @@ class ProductCard extends StatelessWidget {
                     height: 8.0,
                   ),
                   Image.asset(
-                    "assets/shoes_01.png",
+                    imgUrl,
                     width: 251.0,
                     height: 161.0,
                   ),
-                  Text("Hybrid Rocket WNS",
+                  Text(title,
                       style: TextStyle(fontSize: 20.0, fontFamily: "Raleway")),
                   SizedBox(
                     height: 15.0,
@@ -46,13 +46,13 @@ class ProductCard extends StatelessWidget {
                         ),
                         Column(
                           children: <Widget>[
-                            Text("999.0",
+                            Text(previousPrice,
                                 style: TextStyle(
                                     color: Color(0xFFFEB0BA),
                                     fontSize: 16.0,
                                     fontFamily: "Helvetica")),
                                     SizedBox(height: 12.0,),
-                                    Text("\$749", style: TextStyle(fontSize: 28.0, fontFamily: "Helvetica"),),
+                                    Text(price, style: TextStyle(fontSize: 28.0, fontFamily: "Helvetica"),),
                           ],
                         ),
                         IconButton(
